@@ -1,68 +1,189 @@
-/* .yogInfo{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 3;
-}
-.yogImg{
-    display: flex   ;
-    flex-grow: 1;
-} */
-
-.yogContainer{
-    /* height: 100vh;
-    margin: auto; */
-    overflow-y: hidden;
+/* General Container for Yoga Section */
+.yogContainer {
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
     height: 90vh;
     max-height: 100%;
-    /* margin: auto ; */
-    /* background-color: yellow; */
-    background-color: #F4761F;
-    /* color: white; */
-
-
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364); /* Updated gradient background */
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    padding: 20px;
 }
-.yogContainer > h1{
-    color: black;
 
+/* Header Styling */
+.yogContainer > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
 }
-.yogContainerData{
+
+/* Data Section */
+.yogContainerData {
     display: flex;
-    /* padding: 8; */
-    /* justify-content: space-around; */
-
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Increased gap for bigger cards */
 }
-    .yogContainerData > *{
 
-        flex: 1 1 ;
-        height: auto;   
-    }
+/* Styling for individual data blocks (Bigger Cards) */
+.yogContainerData > * {
+    flex: 1 1;
+    height: auto;
+    max-width: 30rem; /* Increased card size */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px; /* Increased padding for larger cards */
+    margin: 20px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-.yogStartPose > button{
+.yogContainerData > *:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Yoga Pose Start Button */
+.yogStartPose > button {
     display: flex;
     margin: auto;
     justify-content: center;
     align-items: center;
-    width: 140px;
+    width: 180px; /* Increased width */
+    padding: 15px;
+    font-size: 1.2rem; /* Increased font size */
+    background: #4caf50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
+.yogStartPose > button:hover {
+    background: #45a049;
 }
-li{
-    margin: 15px 0px ;
+
+/* List Styling */
+li {
+    margin: 15px 0;
+    font-size: 1.3rem;
+    color: #ffffff;
 }
-.yogImg > img{
-    width: 60%;
-}
-.yogInfo {
-    font-size: 20px;
-    padding: 20px;
-    border: 1px solid black;
+
+/* Image Styling */
+.yogImg > img {
+    width: 80%; /* Increased image size */
+    max-width: 100%;
     border-radius: 10px;
-    background-color: #f57f2b;
+}
+
+/* Yoga Info Card Styling */
+.yogInfo {
+    font-size: 1.3rem; /* Increased font size for better readability */
+    padding: 30px; /* Increased padding for larger content */
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 5px 10px #222222;
-
-    
-}
-.yogInfo li{
-    /* width: 80% ; */
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.yogInfo li {
+    color: #ffffff;
+}
+
+.yogInfo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .yogContainerData {
+        gap: 20px; /* Adjusted gap for better spacing */
+    }
+
+    .yogContainerData > * {
+        max-width: 25rem; /* Adjusted card size for medium devices */
+    }
+
+    .yogContainer > h1 {
+        font-size: 2.2rem;
+    }
+
+    .yogStartPose > button {
+        width: 160px;
+        padding: 12px;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    .yogInfo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .yogContainerData {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .yogContainerData > * {
+        max-width: 90%;
+    }
+
+    .yogContainer > h1 {
+        font-size: 1.8rem;
+    }
+
+    .yogStartPose > button {
+        width: 140px;
+        padding: 10px;
+    }
+
+    li {
+        font-size: 1.1rem;
+    }
+
+    .yogInfo {
+        font-size: 1.1rem;
+    }
+
+    .yogImg > img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .yogContainer > h1 {
+        font-size: 1.6rem;
+    }
+
+    .yogStartPose > button {
+        width: 120px;
+        padding: 8px;
+        font-size: 1rem;
+    }
+
+    .yogContainerData > * {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .li {
+        font-size: 1rem;
+    }
+
+    .yogInfo {
+        font-size: 1rem;
+    }
+
+    .yogImg > img {
+        width: 90%;
+    }
+}

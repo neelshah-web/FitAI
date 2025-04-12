@@ -8,7 +8,7 @@ const Home = () => {
     <div className="homeContainer d-flex p-3">
       <div className="homeInfo   d-flex flex-column p-4 my-auto gap-3  ">
         <div className="homeinfo_data d-flex flex-column  justify-content-center gap-3   ">
-          <h1 className="homeInfo_heading">Yoga App </h1>
+          <h1 className="homeInfo_heading">FitAI </h1>
           <h4 className="homeInfo_subheading">
             Revitalize your mind, body, and soul
           </h4>

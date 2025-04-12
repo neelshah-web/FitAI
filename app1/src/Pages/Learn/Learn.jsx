@@ -119,7 +119,7 @@ const Learn = () => {
             className="p-3 m-3 col-md-4 "
             style={{ maxWidth: "20rem", maxHeight: "20rem" }}
           >
-            <Card.Img  style={{ maxWidth: "16rem" }} className="mx-auto" variant="top" src={img7} />
+            <Card.Img style={{ maxWidth: "16rem" }} className="mx-auto" variant="top" src={img7} />
             <Card.Body>
               <Card.Title>Downward Dog Pose</Card.Title>
               {/* <Card.Text>

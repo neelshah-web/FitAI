@@ -1,0 +1,9 @@
+/* src/App.css */
+.app {
+    background-image: url('/assets/background.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: #fff;
+  }
+  

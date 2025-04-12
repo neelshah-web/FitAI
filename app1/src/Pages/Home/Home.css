@@ -1,60 +1,106 @@
-.homeContainer{
-    background-image: url("../../../public/bg2.jpg");
+.homeContainer {
+    background-image: url("../../../public/bg3.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
     background-size: cover;
     height: 90vh;
     background-attachment: fixed;
     background-position: center;
-    /* background-size: 100%; */
     top: 0;
-    overflow: hidden; /* Hide scrollbars */
-    /* color: white; */
-
-
-
-
-
-margin: auto;
-}
-.homeInfo{
+    overflow: hidden;
+    margin: auto;
     display: flex;
-    /* max-width: 100% ; */
-    flex-grow: 1;
-    /* max-width: auto; */
-    /* width: 100%; */
-    /* height: 100%; */
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Vertically center the content */
+    padding: 0 20px; /* Add padding for smaller devices */
+    flex-direction: column; /* Stack content vertically */
 }
-.homeImg{
+
+.homeInfo {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: flex-start; /* Align text to the left */
+    text-align: left; /* Align text to the left */
+    flex-grow: 1;
+    width: 100%; /* Ensure the content takes up full width */
+    padding-right: 20px; /* To prevent text from touching the edge */
+}
+
+.homeImg {
     display: flex;
     flex-grow: 1;
-    /* display: flex; */
-    /* justify-content: center ; */
-    /* align-items: center; */
-    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
-.homeImg > img{
-    margin: 0px auto;
-    /* margin: auto; */
+
+.homeImg > img {
     display: flex;
     width: 70%;
-
+    max-width: 100%;
 }
-.homeinfo_button > button{
-    background-color: #F4761F;
+
+.homeinfo_button {
+    margin-top: 20px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeinfo_button > button {
+    background-color: #4caf50;
     border: none;
     width: 150px;
     height: 40px;
-}
-.homeinfo_button > button:hover{
-    background-color: #f08940;
+    font-size: 16px;
 }
 
-.homeInfo_heading{
-    font-size: 80px ;
+.homeinfo_button > button:hover {
+    background-color: #8bc34a;
 }
 
-.homeInfo_subheading{
-    font-size: 30px ;
+.homeInfo_heading {
+    font-size: 80px;
+    margin: 0;
+}
 
+.homeInfo_subheading {
+    font-size: 30px;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .homeContainer {
+        height: auto; /* Adjust height for small devices */
+        padding: 20px;
+    }
+
+    .homeInfo_heading {
+        font-size: 50px; /* Reduce font size on small devices */
+    }
+
+    .homeInfo_subheading {
+        font-size: 20px; /* Reduce font size on small devices */
+    }
+
+    .homeinfo_button > button {
+        width: 120px; /* Adjust button width for smaller screens */
+        height: 35px; /* Adjust button height for smaller screens */
+    }
+
+    .homeImg > img {
+        width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    /* Stack the text and image on smaller screens */
+    .homeInfo {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; /* Center text for better mobile readability */
+    }
+
+    .homeImg {
+        margin-top: 20px; /* Add space between text and image */
+    }
 }

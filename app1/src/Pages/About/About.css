@@ -1,35 +1,67 @@
-.aboutContainer{
-    background-color: #F4761F;
-    height: 90vh;
-    padding: 10px;  
-    padding: 20px ;
-    margin:auto;
+.aboutContainer {
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
 }
-.aboutContainer{
 
+.aboutData {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.aboutData{
-    margin: 100px 0px;
-    /* gap: 10px; */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-.aboutData  > h5{
-    font-size: 25px;
-    /* text-align: center  ; */
-    border: 1px solid black;
-    width: 150px ;
-    padding: 5px;
-    margin: 20px 0px;
-    border-radius: 10px;
-    background-color: #fc8938;
 
-    box-shadow: 2px 3px #222222;
-
-    /* color: green; */
-
+.aboutData h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.aboutData  > p{
-    font-size:18px ;
-    color: rgba(20, 20, 20, 0.815);
-    font-weight: 550;
+
+.aboutData p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.aboutData ul {
+    font-size: 1.1rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.aboutData li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.aboutData li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
 }

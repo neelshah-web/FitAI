@@ -1,18 +1,88 @@
-.learnContainer{
-    background-color: #F4761F;
-    /* height: 1; */
-    width: 100%;
-    overflow: hidden;
+.learnContainer {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
-.rowss{
-    flex-direction: row;
-    display: flex;
-    gap: 10px;
-    /* margin: 20px; */
-    padding: 10px;
+.learnContainer .rowss {
+  flex-direction: row;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
 }
 
-.grid{
-    margin: 0px;
+.grid {
+  margin: 0px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px auto;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card .card-body {
+  padding: 0;
+}
+
+.card .card-title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.card .card-Img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #45a049;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-body button:hover {
+  background-color: #45a049;
 }

@@ -1,0 +1,124 @@
+.dashboard {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+.dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.dashboard p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.bmi-card, .bmi-result-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px auto;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bmi-card:hover, .bmi-result-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.bmi-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bmi-inputs input, .bmi-inputs select {
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    outline: none;
+}
+
+.bmi-inputs input::placeholder, .bmi-inputs select {
+    color: #cfd8dc;
+}
+
+.bmi-inputs button {
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: #4caf50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bmi-inputs button:hover {
+    background: #45a049;
+}
+
+.bmi-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bmi-result-card h3 {
+    font-size: 1.5rem;
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.bmi-result-card p {
+    font-size: 1.2rem;
+}
+
+.reset-button {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    padding: 5px 15px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font size */
+    background: #f44336;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 170px; /* Set fixed width for the button */
+    text-align: center; /* Center the text inside the button */
+}
+
+.reset-button:hover {
+    background: #d32f2f;
+    transform: translateY(-2px);
+}
+
+
+
+.gender-dropdown {
+    padding: 100px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    outline: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"%3E%3Cpath fill-rule="evenodd" d="M14.707 7.293a1 1 0 0 0-1.414 0L10 11.586 6.707 8.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0 0-1.414z" clip-rule="evenodd" /%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
